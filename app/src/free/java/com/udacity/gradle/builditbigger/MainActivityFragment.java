@@ -37,8 +37,7 @@ public class MainActivityFragment extends Fragment {
 
         // ----------------------------------------------------------------------------------------- Adver
         mPublisherInterstitialAd = new PublisherInterstitialAd(getContext());
-        mPublisherInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        //mPublisherInterstitialAd.setAdUnitId("/6499/example/interstitial");
+        mPublisherInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
         loadAdv();
 
         mPublisherInterstitialAd.setAdListener(new AdListener() {
@@ -49,8 +48,6 @@ public class MainActivityFragment extends Fragment {
 
             @Override
             public void onAdFailedToLoad(int errorCode) {
-                //super.onAdFailedToLoad(errorCode);
-                // Code to be executed when an ad request fails.
                 loadAdv();
         }
 
